@@ -1,9 +1,16 @@
 import { INCREMENT, DECREMENT,CHNGNAME } from "../constants";
 
-export function chngname(){
+export function chngval(e){
     return {
-        type:CHNGNAME
-        
+        type:CHNGNAME,
+        text: e
+    }
+}
+
+export function chngname(e){
+    return {
+        type:CHNGNAME,
+        text: e
     }
 }
 export function increment(){

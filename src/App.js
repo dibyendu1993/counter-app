@@ -3,14 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App(props){
-    const {chngname, counter, decrement, increment} = props;
+    const {chngval, name, chngname, counter, decrement, increment} = props;
     return (
     <div>
      <div> enter name<input onChange={chngname}/></div>
-     <div> enter counter value<input/></div>
-     <button onClick={chngname}>submit</button>
+     <div> enter counter value<input onChange={chngval}/></div>
+     this is {name}
      <br/>
-     <div>{name}</div>
       the value of counter is {counter}.
       <button onClick={increment}> increase </button>
       <button onClick={decrement}> decrease </button>
