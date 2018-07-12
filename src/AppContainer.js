@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import App from './App';
-import {increment, decrement, chngname} from './actions';
+import {chngval, increment, decrement, chngname} from './actions';
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -9,11 +9,15 @@ class AppContainer extends React.Component {
         this.onIncrement = this.onIncrement.bind(this);
         this.onDecrement = this.onDecrement.bind(this);
         this.Chngname = this.Chngname.bind(this);
-        // this.ChngVal = this.ChngVal.bind(this);
+        this.ChngVal = this.ChngVal.bind(this);
     }
     Chngname(e) {
         //console.log(e.target.value)
         this.props.chngname(e.target.value);
+    }
+    ChngVal(e) {
+        console.log(e.target.value)
+        this.props.chngval(e.target.value);
     }
     onIncrement() {
         this.props.increment();
@@ -25,7 +29,7 @@ class AppContainer extends React.Component {
         const count=this.props.count;
         const name=this.props.name
     console.log(count)
-    return (<div><App chngval={this.Chngval} chngname={this.Chngname} name={name} counter={count} increment={this.onIncrement} decrement={this.onDecrement} /></div>);
+    return (<div><App chngval={this.ChngVal} chngname={this.Chngname} name={name} counter={count} increment={this.onIncrement} decrement={this.onDecrement} /></div>);
     }
 }
 function mapStateToProp(state){
@@ -34,4 +38,4 @@ function mapStateToProp(state){
         name:state.name
     }
 }
-export default connect(mapStateToProp, {increment, decrement,chngname})(AppContainer);
+export default connect(mapStateToProp, {chngval, increment, decrement, chngname})(AppContainer);

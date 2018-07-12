@@ -1,8 +1,8 @@
-import { INCREMENT, DECREMENT,CHNGNAME } from "../constants";
+import { CHNGVAL, INCREMENT, DECREMENT,CHNGNAME } from "../constants";
 
 export function chngval(e){
     return {
-        type:CHNGNAME,
+        type:CHNGVAL,
         text: e
     }
 }
