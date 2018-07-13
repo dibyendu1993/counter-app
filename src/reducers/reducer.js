@@ -1,4 +1,4 @@
-import { CHNGVAL, INCREMENT, DECREMENT,CHNGNAME } from "../constants";
+import { CHANGEVALUE, INCREMENT, DECREMENT,CHANGENAME } from "../constants";
 
 export function counterReducer(state = {numcount:0,name:'',counterval:1}, action) {
     console.log(state)
@@ -14,12 +14,12 @@ export function counterReducer(state = {numcount:0,name:'',counterval:1}, action
             ...state,
             numcount: state.numcount - state.counterval,
         };
-        case CHNGNAME:
+        case CHANGENAME:
         return {
             ...state,
             name: action.text,
         };
-        case CHNGVAL:
+        case CHANGEVALUE:
         let temp=parseInt(action.text);
         (!temp)?temp=1:temp
         return {

@@ -1,15 +1,15 @@
-import { CHNGVAL, INCREMENT, DECREMENT,CHNGNAME } from "../constants";
+import { CHANGEVALUE, INCREMENT, DECREMENT,CHANGENAME } from "../constants";
 
-export function chngval(e){
+export function changevalue(e){
     return {
-        type:CHNGVAL,
+        type:CHANGEVALUE,
         text: e
     }
 }
 
-export function chngname(e){
+export function changename(e){
     return {
-        type:CHNGNAME,
+        type:CHANGENAME,
         text: e
     }
 }
