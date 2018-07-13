@@ -1,4 +1,4 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-export const CHNGNAME = 'CHNGNAME';
-export const CHNGVAL = 'CHNGVAL';
+export const CHANGENAME = 'CHANGENAME';
+export const CHANGEVALUE = 'CHANGEVALUE';

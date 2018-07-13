@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {Provider} from 'react-redux';
 import { createStore } from 'redux';
-import { counterReducer } from './reducers/reducer';
+import  Rootreducer  from './reducers';
 import AppContainer from './AppContainer';
 
-const store=createStore(counterReducer);
+const store=createStore(Rootreducer);
 ReactDOM.render(
   <Provider store={store}>
   <AppContainer />

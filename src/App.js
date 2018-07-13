@@ -3,11 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App(props){
-    const {chngval, name, chngname, counter, decrement, increment} = props;
+    const {changevalue, name, changename, counter, decrement, increment} = props;
     return (
     <div>
-     <div> enter name<input onChange={chngname}/></div>
-     <div> enter counter value<input onChange={chngval}/></div>
+     <div> enter name<input onChange={changename}/></div>
+     <div> enter counter value<input onChange={changevalue}/></div>
      this is {name}
      <br/>
       the value of counter is {counter}.
