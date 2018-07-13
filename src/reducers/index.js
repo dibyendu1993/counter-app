@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import countervalReducer from './countervalReducer'
-import counterReducer from './counterReducer'
+import {countervalueReducer} from './countervalueReducer'
+import {counterReducer} from './counterReducer'
 
 export default combineReducers({
-    countervalReducer:countervalReducer,
-    counterReducer:counterReducer
+    countername:countervalueReducer,
+    countervalue:counterReducer
   })

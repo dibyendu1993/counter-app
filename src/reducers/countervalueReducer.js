@@ -1,9 +1,8 @@
-import { CHANGEVALUE, CHNGNAME} from "../constants"
+import { CHANGEVALUE, CHANGENAME} from "../constants"
 
-export function countervalReducer(state = {numcount:0,name:'',counterval:1}, action) {
-    console.log(state)
+export function countervalueReducer(state = {name:'',counterval:1}, action) {
     switch (action.type) {
-        case CHNGNAME:
+        case CHANGENAME:
         return {
             ...state,
             name: action.text,

@@ -13,15 +13,17 @@ export function changename(e){
         text: e
     }
 }
-export function increment(){
+export function increment(a){
+    console.log(a)
     return {
-        type:INCREMENT
-        
+        type:INCREMENT,
+        index: a
     }
 }
-export function decrement(){
+export function decrement(a){
     return {
-        type:DECREMENT
+        type:DECREMENT,
+        index: a
         
     }
 }

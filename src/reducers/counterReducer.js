@@ -1,18 +1,17 @@
 import {  INCREMENT, DECREMENT } from "../constants";
-
-export function counterReducer(state = {numcount:0,name:'',counterval:1}, action) {
-    console.log(state)
-   // console.log(action.text)
+//import {countervalueReducer} from './countervalueReducer'
+export function counterReducer(state = {numcount:0}, action) {
     switch (action.type) {
         case INCREMENT:
             return {
+                
                 ...state,
-                numcount: state.numcount + state.counterval,
+                numcount: state.numcount + action.index,
             };
         case DECREMENT:
         return {
             ...state,
-            numcount: state.numcount - state.counterval,
+            numcount: state.numcount - action.index,
         };
         default:
             return state;
