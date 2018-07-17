@@ -1,9 +1,16 @@
-import { CHANGEVALUE, INCREMENT, DECREMENT,CHANGENAME } from "../constants";
+import { FORM,CHANGEVALUE, INCREMENT, DECREMENT,CHANGENAME } from "../constants";
 
 export function changevalue(e){
     return {
         type:CHANGEVALUE,
         text: e
+    }
+}
+
+export function handleSubmit(e){
+    return {
+        type:FORM,
+        text:e
     }
 }
 
